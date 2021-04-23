@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  height: 100%;
+  background-color: #230020;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  font-family: "Inconsolata", monospace;
+  padding: 10px 24px;
+  font-size: 1.2em;
   color: white;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.data_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  justify-content: space-evenly;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.photo_item {
+  font-family: "Inconsolata", monospace;
+  margin: 4% 0;
+  width: 30%;
+  height: 50vh;
+  transition: all 1s;
+}
+
+.photo_img {
+  width: 100%;
+  height: 90%;
+}
+
+.photo_link {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  height: 10%;
+}
+
+img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  margin-right: 60px;
+  font-family: "Inconsolata", monospace;
+  font-size: 0.8em;
+  border: none;
+  background-color: black;
+  color: white;
+  height: 50px;
+  width: 15%;
+  transition: all 1s;
+}
+
+button:hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+}
+
+button:active {
+  color: black;
+  background-color: white;
+}
+
+@media screen and (max-width: 1280px) {
+  .photo_item {
+    font-family: "Inconsolata", monospace;
+    margin: 4% 0;
+    width: 50%;
+    height: 50vh;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 900px) {
+  .photo_item {
+    font-family: "Inconsolata", monospace;
+    margin: 4% 0;
+    width: 90%;
+    height: 50vh;
   }
 }
